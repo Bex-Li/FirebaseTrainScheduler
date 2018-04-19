@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Train Scheduler</title>
-  <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -12,25 +15,40 @@
     <h1 class="display-3">Train Scheduler</h1>
   </div>
 
-  <table class="table table-hover">
-    <h3>Current Train Time</h3>
-    <tr>
-      <th scope="col">Train Name</th>
-      <th scope="col">Destination</th>
-      <th scope="col">Frequency (min)</th>
-      <th scope="col">Next Arrival</th>
-      <th scope="col">Minutes Away</th>
-    </tr>
-    </thead>
-  </table>
 
-  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-    <div class="card-header">
-      <h3>Add Train Info</h3>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <strong>Current Train Time</strong>
+      </h3>
     </div>
-    <div class="card-body">
+    <div class="panel-body">
+      <table class="table table-hover" id='train-scheduler-table'>
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency</th>
+            <th>First Train</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <strong>Add Train Info</strong>
+      </h3>
+    </div>
+    <div class="panel-body">
       <div class="row">
-        <div class="container col-md-8">
+        <div class="container col-md-12">
           <form>
             <label>Train Name</label>
             <br>
@@ -63,9 +81,8 @@
 
 
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/train.js">
   </script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
